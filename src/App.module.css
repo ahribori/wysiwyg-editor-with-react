@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+}
+
+.menu_container {
+  padding: 16px;
+  width: 250px;
+  border-right: 1px dashed grey;
+}
+
+.main_container {
+  flex-grow: 1;
+  padding: 16px;
+}
