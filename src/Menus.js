@@ -4,7 +4,7 @@ import styles from './App.module.css';
 export const Menus = () => (
   <nav className={styles.menu_container}>
     <ul>
-      <li>Toast Editor</li>
+      <li>TUI Editor</li>
     </ul>
   </nav>
 );

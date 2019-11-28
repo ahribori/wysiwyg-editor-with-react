@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Index from "./containers";
+import TUIEditorPage from "./containers/TUIEditorPage";
 
 export const Routes = () => (
   <Switch>
     <Route path="/">
-      <Index />
+      <TUIEditorPage />
     </Route>
   </Switch>
 );
