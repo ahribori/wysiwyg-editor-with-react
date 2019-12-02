@@ -4,10 +4,13 @@ const SummerNotePage = () => {
   useEffect(() => {
     const $ = window.$;
 
-    $('.summernote').summernote({
+    $(".summernote").summernote({
       height: 500,
     });
 
+    return () => {
+      $(".summernote").summernote("destroy");
+    };
   }, []);
   return <div className="summernote" />;
 };

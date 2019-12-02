@@ -11,6 +11,9 @@ export const Menus = () => (
       <Link to="/summernote">
         <li>Summernote Editor</li>
       </Link>
+      <Link to="/ckeditor">
+        <li>CKEditor Editor</li>
+      </Link>
     </ul>
   </nav>
 );
