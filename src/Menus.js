@@ -1,10 +1,16 @@
 import React from "react";
-import styles from './App.module.css';
+import styles from "./App.module.css";
+import { Link } from "react-router-dom";
 
 export const Menus = () => (
   <nav className={styles.menu_container}>
     <ul>
-      <li>TUI Editor</li>
+      <Link to="/">
+        <li>TUI Editor</li>
+      </Link>
+      <Link to="/summernote">
+        <li>Summernote Editor</li>
+      </Link>
     </ul>
   </nav>
 );
