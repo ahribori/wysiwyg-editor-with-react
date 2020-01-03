@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { Modal, Button } from "antd";
+import { Modal } from "antd";
 import { HelloButton } from "../components/summernote/modules/Hello";
 
 const SampleTemplate = ({ label }) => {

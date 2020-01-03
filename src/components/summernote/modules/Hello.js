@@ -1,7 +1,6 @@
-import { Modal, Button } from 'antd';
 
 export const HelloButton = ($summernote, $) => context => {
-  const summernote = $.summernote;
+  // const summernote = $.summernote;
   const button = $.summernote.ui.button({
     contents: '<i class="fa fa-child"/> Hello',
     tooltip: "hello",
