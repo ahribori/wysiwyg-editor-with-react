@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import CKEditor from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import ClassicEditor from "@ckeditor/ckeditor5-editor-classic/src/classiceditor";
+import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials";
+import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
+import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
+import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
+
 import "../styles/ckeditor-content.css";
 import Toolbar from "../components/ckeditor5/Toolbar";
+
+const editorConfiguration = {
+  plugins: [Essentials, Bold, Italic, Paragraph],
+  toolbar: ["bold", "italic"]
+};
 
 const CKEditorPage = () => {
   const [ready, setReady] = useState(false);
@@ -25,6 +35,7 @@ const CKEditorPage = () => {
           const data = editor.getData();
           console.log({ event, editor, data });
         }}
+        config={editorConfiguration}
       />
     </>
   );
