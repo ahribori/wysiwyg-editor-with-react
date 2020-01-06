@@ -5,13 +5,15 @@ import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials";
 import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
+import Image from "@ckeditor/ckeditor5-image/src/image";
+import InsertImage from "../components/ckeditor5/plugin/InsertImage";
 
 import "../styles/ckeditor-content.css";
 import Toolbar from "../components/ckeditor5/Toolbar";
 
-const editorConfiguration = {
-  plugins: [Essentials, Bold, Italic, Paragraph],
-  toolbar: ["bold", "italic"]
+const config = {
+  plugins: [Essentials, Bold, Italic, Paragraph, Image, InsertImage],
+  toolbar: ["bold", "italic", "insertImage"]
 };
 
 const CKEditorPage = () => {
@@ -24,7 +26,6 @@ const CKEditorPage = () => {
       {ready && <Toolbar editor={editor} />}
       <CKEditor
         editor={ClassicEditor}
-        data="<p>Hello from CKEditor 5!</p>"
         onInit={editor => {
           // You can store the "editor" and use when it is needed.
           console.log("Editor is ready to use!", editor);
@@ -35,7 +36,7 @@ const CKEditorPage = () => {
           const data = editor.getData();
           console.log({ event, editor, data });
         }}
-        config={editorConfiguration}
+        config={config}
       />
     </>
   );
