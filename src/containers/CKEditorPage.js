@@ -9,6 +9,7 @@ import Heading from "@ckeditor/ckeditor5-heading/src/heading";
 import List from "@ckeditor/ckeditor5-list/src/list";
 import Image from "@ckeditor/ckeditor5-image/src/image";
 import InsertImage from "../components/ckeditor5/plugin/InsertImage";
+import SimpleBox from "../components/ckeditor5/plugin/simplebox/simplebox";
 
 import "../styles/ckeditor-content.css";
 import Toolbar from "../components/ckeditor5/Toolbar";
@@ -23,7 +24,8 @@ const config = {
     Italic,
     Paragraph,
     Image,
-    InsertImage
+    InsertImage,
+    SimpleBox
   ],
   toolbar: [
     "heading",
@@ -34,6 +36,20 @@ const config = {
     "insertImage"
   ]
 };
+
+const initialContents = `
+ <p>This is a simple box:</p>
+<section class="simple-box">
+    <h1 class="simple-box-title">Box title</h1>
+    <div class="simple-box-description">
+        <p>The description goes here.</p>
+        <ul>
+            <li>It can contain lists,</li>
+            <li>and other block elements like headings.</li>
+        </ul>
+    </div>
+</section>
+`;
 
 const CKEditorPage = () => {
   const [ready, setReady] = useState(false);
@@ -56,6 +72,7 @@ const CKEditorPage = () => {
           console.log({ event, editor, data });
         }}
         config={config}
+        data={initialContents}
       />
     </>
   );
