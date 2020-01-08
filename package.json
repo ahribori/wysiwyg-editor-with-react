@@ -18,6 +18,7 @@
     "@ckeditor/ckeditor5-react": "^2.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^16.0.0",
     "@ckeditor/ckeditor5-ui": "^16.0.0",
+    "@ckeditor/ckeditor5-widget": "^16.0.0",
     "@svgr/webpack": "4.3.3",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",

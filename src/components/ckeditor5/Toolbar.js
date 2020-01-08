@@ -53,6 +53,14 @@ const Toolbar = ({ editor }) => {
         >
           htmlString insertContent
         </button>
+
+        <button
+          onClick={() => {
+            editor.execute("insertSimpleBox");
+          }}
+        >
+          insertSimpleBox
+        </button>
       </div>
     )
   );
