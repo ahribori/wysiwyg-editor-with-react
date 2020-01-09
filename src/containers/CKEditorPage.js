@@ -33,7 +33,9 @@ const config = {
     "italic",
     "numberedList",
     "bulletedList",
-    "insertImage"
+    "insertImage",
+    "|",
+    "simpleBox"
   ]
 };
 
