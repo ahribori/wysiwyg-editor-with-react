@@ -61,6 +61,14 @@ const Toolbar = ({ editor }) => {
         >
           insertSimpleBox
         </button>
+
+        <button
+          onClick={() => {
+            editor.execute("insertProduct");
+          }}
+        >
+          insertProductPreview
+        </button>
       </div>
     )
   );
